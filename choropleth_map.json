@@ -21,7 +21,7 @@
       }
     },
     {
-      "calculate": "datum.BirthRate === null ? 'null' : datum.BirthRate",
+      "calculate": "datum.BirthRate === 'null' ? 'null' : datum.BirthRate",
       "as": "BirthRateModified"
     }
   ],
@@ -56,11 +56,14 @@
       },
       "encoding": {
         "color": {
-          "field": "BirthRateModified",
-          "type": "nominal",
-          "scale": { 
-            "domain": ["null"],
-            "range": ["#d9d9d9"] 
+          "condition": {
+            "test": "datum.BirthRateModified === 'null'",
+            "value": "#d9d9d9"
+          },
+          "field": "BirthRate",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "viridis" 
           },
           "title": "Crude Birth Rate"
         },
