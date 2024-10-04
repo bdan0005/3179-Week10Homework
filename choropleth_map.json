@@ -29,7 +29,7 @@
     {
       "mark": {
         "type": "rect",
-        "fill": "lightblue"
+        "fill": "#e4f3f5"
       },
       "encoding": {
         "x": {"value": 0},
@@ -44,21 +44,21 @@
       },
       "mark": {
         "type": "geoshape",
-        "stroke": "white",
+        "stroke": "#d3e1e3",
         "strokeWidth": 0.5
       }
     },
     {
       "mark": {
         "type": "geoshape",
-        "stroke": "lightblue",
+        "stroke": "#e4f3f5",
         "strokeWidth": 0.5
       },
       "encoding": {
         "color": {
           "condition": {
             "test": "datum.BirthRateModified === 'Not Available'",
-            "value": "#d9d9d9"
+            "value": "#d3e1e3"
           },
           "field": "BirthRate",
           "type": "quantitative",
