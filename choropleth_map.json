@@ -19,6 +19,10 @@
         "key": "Code",
         "fields": ["BirthRate"]
       }
+    },
+    {
+      "calculate": "datum.BirthRate === null ? 'null' : datum.BirthRate",
+      "as": "BirthRateModified"
     }
   ],
   "layer": [
@@ -53,15 +57,16 @@
       "encoding": {
         "color": {
           "field": "BirthRateModified",
-          "type": "quantitative",
+          "type": "nominal",
           "scale": { 
-            "scheme": "viridis" 
+            "domain": ["null"],
+            "range": ["#d9d9d9"] 
           },
           "title": "Crude Birth Rate"
         },
         "tooltip": [
           { "field": "properties.NAME", "type": "nominal", "title": "Country" },
-          { "field": "BirthRateModified", "type": "quantitative", "title": "Birth Rate (per thousand people)" }
+          { "field": "BirthRateModified", "type": "nominal", "title": "Birth Rate" }
         ]
       }
     }
