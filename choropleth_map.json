@@ -52,14 +52,16 @@
       },
       "encoding": {
         "color": {
-          "field": "BirthRate",
+          "field": "BirthRateModified",
           "type": "quantitative",
-          "scale": { "scheme": "viridis" },
+          "scale": { 
+            "scheme": "viridis" 
+          },
           "title": "Crude Birth Rate"
         },
         "tooltip": [
           { "field": "properties.NAME", "type": "nominal", "title": "Country" },
-          { "field": "BirthRate", "type": "quantitative", "title": "Birth Rate (per thousand people)" }
+          { "field": "BirthRateModified", "type": "quantitative", "title": "Birth Rate (per thousand people)" }
         ]
       }
     }
