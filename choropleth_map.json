@@ -21,7 +21,7 @@
       }
     },
     {
-      "calculate": "datum.BirthRate === -1 ? 'null' : datum.BirthRate",
+      "calculate": "datum.BirthRate === '' ? 'Not Available' : datum.BirthRate",
       "as": "BirthRateModified"
     }
   ],
@@ -57,7 +57,7 @@
       "encoding": {
         "color": {
           "condition": {
-            "test": "datum.BirthRateModified === 'null'",
+            "test": "datum.BirthRateModified === 'Not Available'",
             "value": "#d9d9d9"
           },
           "field": "BirthRate",
