@@ -33,9 +33,9 @@
       },
       "encoding": {
         "x": {"value": 0},
-        "y": {"value": 0},
+        "y": {"value": 25},
         "x2": {"value": 800}, 
-        "y2": {"value": 450}  
+        "y2": {"value": 425}  
       }
     },
     {
@@ -74,5 +74,5 @@
       }
     }
   ],
-  "projection": { "type": "equalEarth" }
+  "projection": { "type": "equirectangular" }
 }
