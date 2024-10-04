@@ -114,7 +114,7 @@ Jordan,JOR,2023,20.611
 Kazakhstan,KAZ,2023,20.138
 Kenya,KEN,2023,27.106
 Kiribati,KIR,2023,25.813
-Kosovo,OWID_KOS,2023,12.067
+Kosovo,KOS,2023,12.067
 Kuwait,KWT,2023,10.197
 Kyrgyzstan,KGZ,2023,21.313
 Laos,LAO,2023,21.271
@@ -237,7 +237,7 @@ Uganda,UGA,2023,35.201
 Ukraine,UKR,2023,5.625
 United Arab Emirates,ARE,2023,9.774
 United Kingdom,GBR,2023,10.023
-United States,USA,2023,10.648
+United States of America,USA,2023,10.648
 United States Virgin Islands,VIR,2023,11.189
 Upper-middle-income countries,,2023,10.125
 Uruguay,URY,2023,9.871
@@ -252,3 +252,7 @@ World,OWID_WRL,2023,16.327
 Yemen,YEM,2023,35.209
 Zambia,ZMB,2023,33.081
 Zimbabwe,ZWE,2023,30.41
+Fr. S. and Antarctic Lands,ATF,2023,null
+Antarctica,ATA,2023,null
+N. Cyprus,NCY,2023,null
+Somaliland,SML,2023,null
