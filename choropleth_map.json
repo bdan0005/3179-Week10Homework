@@ -21,7 +21,7 @@
       }
     },
     {
-      "calculate": "datum.BirthRate === 'null' ? 'null' : datum.BirthRate",
+      "calculate": "datum.BirthRate === -1 ? 'null' : datum.BirthRate",
       "as": "BirthRateModified"
     }
   ],
