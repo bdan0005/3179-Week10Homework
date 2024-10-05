@@ -15,8 +15,8 @@
       "as": "norm_val"
     },
     {
-      "calculate": "(1.4 + 2.2) / 2",
-      "as": "mid"
+      "calculate": "(datum.value - 1.4) / (2.2 - 1.4) + 0.04",
+      "as": "y_offset"
     }
   ],
   "layer": [
@@ -100,12 +100,6 @@
       },
       "layer": [
         {
-          "mark": {"type": "text", "style": "label"},
-          "encoding": {
-            "text": {"value": "1.7"}
-          }
-        },
-        {
           "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
         }
       ]
@@ -124,6 +118,50 @@
         },
         {
           "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+        }
+      ]
+    },
+    {
+      "mark": "text",
+      "encoding": {
+        "x": {"field": "key", "type": "nominal"},
+        "y": {
+          "field": "y_offset", 
+          "type": "quantitative"
+        },
+        "text": {"value": "1.73%"},
+        "color": {"value": "black"}
+      },
+      "transform": [
+        {
+          "filter": {
+            "and": [
+              {"field": "State/Territory", "equal": "NT"},
+              {"field": "key", "equal": "2022"}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "mark": "text",
+      "encoding": {
+        "x": {"field": "key", "type": "nominal"},
+        "y": {
+          "field": "y_offset", 
+          "type": "quantitative"
+        },
+        "text": {"value": "1.41%"},
+        "color": {"value": "black"}
+      },
+      "transform": [
+        {
+          "filter": {
+            "and": [
+              {"field": "State/Territory", "equal": "ACT"},
+              {"field": "key", "equal": "2022"}
+            ]
+          }
         }
       ]
     }
