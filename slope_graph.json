@@ -14,6 +14,6 @@
       "field": "FertilityRate",
       "type": "quantitative"
     },
-    "color": {"field": "State", "type": "nominal"}
+    "color": {"field": "State/Territory", "type": "nominal"}
   }
 }
