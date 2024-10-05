@@ -1,10 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Fertility Rate",
+  "title": "Fertility Rate Over Time",
   "data": {
     "url": "https://raw.githubusercontent.com/bdan0005/3179-Week10Homework/refs/heads/main/parallel-fertility-rate.csv"
   },
-  "width": 600,
+  "width": 400,
   "height": 300,
   "transform": [
     {"window": [{"op": "count", "as": "index"}]},
