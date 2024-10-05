@@ -1,19 +1,42 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/bdan0005/3179-Week10Homework/refs/heads/main/slope-fertility-rate.csv"},
-  "description": "Slope graph",
-  "mark": "line",
+  "data": {
+    "url": "https://raw.githubusercontent.com/bdan0005/3179-Week10Homework/refs/heads/main/slope-fertility-rate.csv"
+  },
+  "description": "Slope graph with dots at the ends of lines",
   "width": {"step": 50},
-  "encoding": {
-    "x": {
-      "field": "Year",
-      "type": "ordinal",
-      "scale": {"padding": 0.5}
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "scale": {"padding": 0.5}
+        },
+        "y": {
+          "field": "FertilityRate",
+          "type": "quantitative",
+          "scale": {
+            "domain": [1.4, 2.2],  
+            "nice": false  }
+        },
+        "color": {"field": "State/Territory", "type": "nominal"}
+      }
     },
-    "y": {
-      "field": "FertilityRate",
-      "type": "quantitative"
-    },
-    "color": {"field": "State/Territory", "type": "nominal"}
-  }
+    {
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "FertilityRate",
+          "type": "quantitative"
+        },
+        "color": {"field": "State/Territory", "type": "nominal"}
+      }
+    }
+  ]
 }
